@@ -1,0 +1,15 @@
+kind: Gateway
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
+  name: external-http
+  namespace: whereami-testco-xyz
+spec:
+  gatewayClassName: gke-l7-global-external-managed
+  listeners:
+  - name: https
+    protocol: HTTPS
+    port: 443
+    tls:
+      mode: Terminate
+      certificateRefs: # Directly reference the Kubernetes Secret containing the TLS certificate and private key.
+      - name: testco-xyz # The name of the TLS secret.

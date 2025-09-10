@@ -1,0 +1,1 @@
+V	350907202848Z		1000	unknown	/C=US/ST=Illinois/O=TestCo/OU=TestCo Certificate Authority/CN=TestCo Intermediate CA
